@@ -121,3 +121,45 @@
     }
   }
   
+/*About and Section*/
+
+.section {
+  margin-top: 10%;
+}
+
+img {
+  height: 70%;
+  width: auto;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+.about {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 50px;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+}
+
+.p {
+  text-align: right;
+}
+
+.aboutus {
+  position: right ;
+  font-family: "Montserrat", sans-serif;
+  padding: 2%;
+  text-align: justify;
+}
+
