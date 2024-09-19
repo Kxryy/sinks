@@ -1,172 +1,202 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #24252a;
+}
+
+nav {
+  order: 1;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  font-size: 16px;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li:nth-child(1) {
+  padding: 0 20px 0 0;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  order: 2;
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: #24252a;
+    padding: 30px 5%;
   }
-  
-  nav {
-    order: 1;
-  }
-  
-  .nav__links a,
-  .cta,
-  .overlay__content a {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    color: #edf0f1;
-    text-decoration: none;
-  }
-  
+
   .nav__links {
-    list-style: none;
-    display: flex;
-    font-size: 16px;
+    font-size: 14px;
   }
-  
+
   .nav__links li {
-    padding: 0px 20px;
+    padding: 0px 15px;
   }
-  
-  .nav__links li:nth-child(1) {
-    padding: 0 20px 0 0;
-  }
-  
-  .nav__links li a {
-    transition: all 0.3s ease 0s;
-  }
-  
-  .nav__links li a:hover {
-    color: #0088a9;
-  }
-  
+
   .cta {
-    order: 2;
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+    padding: 8px 20px;
+    margin-left: 15px;
   }
-  
-  .cta:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5%;
   }
-  
-  /* Media Queries for Responsive Design */
-  
-  @media (max-width: 1200px) {
-    header {
-      padding: 30px 5%;
-    }
-  
-    .nav__links {
-      font-size: 14px;
-    }
-  
-    .nav__links li {
-      padding: 0px 15px;
-    }
-  
-    .cta {
-      padding: 8px 20px;
-      margin-left: 15px;
-    }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
-  
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 5%;
-    }
-  
-    .nav__links {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-    }
-  
-    .nav__links li {
-      padding: 10px 0;
-    }
-  
-    .cta {
-      margin-left: 0;
-      width: 100%;
-      text-align: center;
-    }
+
+  .nav__links li {
+    padding: 10px 0;
   }
-  
-  @media (max-width: 480px) {
-    .nav__links {
-      font-size: 12px;
-    }
-  
-    .nav__links li {
-      padding: 8px 0;
-    }
-  
-    .cta {
-      padding: 7px 15px;
-    }
+
+  .cta {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .nav__links {
+    font-size: 12px;
+  }
+
+  .nav__links li {
+    padding: 8px 0;
+  }
+
+  .cta {
+    padding: 7px 15px;
+  }
+}
+
 /*About and Section*/
 
 .section {
-  margin-top: 50%
+margin-top: 50%
 }
 
 section {
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 }
 
 .about {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 50px;
+width: auto;
+display: flex;
+flex-direction: column;
+align-items: left;
+padding: 50px;
 
 }
 
 h1 {
-  display: flex;
-  align-self: center;
-  flex-direction: row;
-  font-family: "Montserrat", sans-serif;
-  padding: 10%;
+display: flex;
+text-align: center;
+flex-direction: column;
+font-family: "Montserrat", sans-serif;
+}
+
+#Sink {
+  padding: 10px;
 }
 
 #about {
-  align-self: center;
-}
-
-.p {
-  text-align: right;
+align-self: center;
 }
 
 .aboutus {
-  display: flex;
-  margin-right: 20%;
-  font-family: "Montserrat", sans-serif;
-  padding: 2%;
-  text-align: justify;
+text-align: right;
+}
+
+.aboutus {
+display: flex;
+margin-right: 20%;
+font-family: "Montserrat", sans-serif;
+padding: 2%;
+text-align: justify;
 }
 
 #sink1 {
+display: flex;
+height: 400px;
+width: auto;
+}
+
+/*Types of Sinks*/
+
+
+.Type {
   display: flex;
-  height: 400px;
+  align-self: center;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+
+#sink2 {
+  padding: 40px 25px;
+  height: 500px;
   width: auto;
+}
+
+.Typ {
+  margin: 100px;
+}
+
+#Types {
+  display: flex;
 }
