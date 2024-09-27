@@ -1,19 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-header {
+/* Simple Header */
+.header1 {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: #393a42;
+  padding: 1%;
+}
+
+.header1 h1, h2 {
+  color: white;
+}
+
+/* Navigation */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
   background-color: #24252a;
-}
-
-nav {
-  order: 1;
 }
 
 .nav__links a,
@@ -62,29 +77,9 @@ nav {
   background-color: rgba(0, 136, 169, 0.8);
 }
 
-/* Media Queries for Responsive Design */
-
-@media (max-width: 1200px) {
-  header {
-    padding: 30px 5%;
-  }
-
-  .nav__links {
-    font-size: 14px;
-  }
-
-  .nav__links li {
-    padding: 0px 15px;
-  }
-
-  .cta {
-    padding: 8px 20px;
-    margin-left: 15px;
-  }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  header {
+  nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 5%;
@@ -92,7 +87,7 @@ nav {
 
   .nav__links {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
   }
 
@@ -121,82 +116,272 @@ nav {
   }
 }
 
-/*About and Section*/
-
-.section {
-margin-top: 50%
-}
-
-section {
-display: flex;
-align-items: center;
-}
-
-.about {
-width: auto;
-display: flex;
-flex-direction: column;
-align-items: left;
-padding: 50px;
-
-}
-
-h1 {
-display: flex;
-text-align: center;
-flex-direction: column;
-font-family: "Montserrat", sans-serif;
-}
-
-#Sink {
-  padding: 10px;
-}
-
-#about {
-align-self: center;
-}
-
-.aboutus {
-text-align: right;
-}
-
-.aboutus {
-display: flex;
-margin-right: 20%;
-font-family: "Montserrat", sans-serif;
-padding: 2%;
-text-align: justify;
-}
-
-#sink1 {
-display: flex;
-height: 400px;
-width: auto;
-}
-
-/*Types of Sinks*/
-
-
-.Type {
-  display: flex;
-  align-self: center;
-}
-
-p {
+/* Main Section */
+.main {
   font-family: "Montserrat", sans-serif;
-  text-align: justify;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.75)), url(images/Sinks.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  padding: 5%;
+  text-align: center;
 }
 
-#sink2 {
-  padding: 40px 25px;
+.main h1 {
+  font-size: 60px;
+  color: aliceblue;
+  padding-top: 5%;
+}
+
+.main p {
+  margin-top: 4.75%;
+  color: aliceblue;
+  font-size: 25px;
+}
+
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 40px;
+  }
+  .main p {
+    padding: 5%;
+    font-size: 20px;
+  }
+}
+
+/* Middle Section */
+.middlesection {
+  font-family: "Montserrat", sans-serif;
+  height: auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.middlesection #Sink1, #Sink2, #Sink3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  max-width: 450px;
+  margin: 10px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.middlesection #Sink1:hover, #Sink2:hover, #Sink3:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+  flex-wrap: wrap;
+}
+
+.middlesection h1 {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  font-size: 45px;
+}
+
+@media (max-width: 768px) {
+  .middlesection {
+    padding: 2%;
+  }
+
+  .middlesection #Sink1, #Sink2, #Sink3 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middlesection h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .middlesection .row {
+    flex-direction: column;
+    padding: 1%;
+  }
+
+  #Sink1, #Sink2, #Sink3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .middlesection h1 {
+    font-size: 18px;
+    padding: 1%;
+  }
+}
+
+/* Types of Sinks Section */
+.midbot {
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(rgba(4, 21, 30, 0.959), rgba(4, 23, 30, 0.945)), url(images/sink1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 750px;
+  padding: 4.5%;
+}
+
+.midbot h1 {
+  padding: 1.5%;
+  display: flex;
+  justify-content: left;
+  background-color: #6ce0fd8a;
+  color: rgb(255, 245, 245);
+  padding-left: 5%;
+}
+
+.midbot p {
+  color: white;
+  display: flex;
+  text-align: center;
+  font-size: 28px;
+  padding: 10%;
+}
+
+.midbot img {
+  margin-top: 15px;
+  margin-left: 15px;
+  display: flex;
   height: 500px;
   width: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Typ {
-  margin: 100px;
-}
-
-#Types {
+.picwithdesc {
   display: flex;
+  justify-content: space-evenly;
+}
+
+.midbot img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Features and Benefits Section */
+.bottom {
+  margin-top: 5%;
+  padding: 2%;
+  font-family: "Montserrat", sans-serif;
+  padding: 4.5%;
+}
+
+.picwithdesc2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.bottom p {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  padding: 8%;
+}
+
+.bottom h1 {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+.bottom img {
+  display: flex;
+  height: 450px;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bottom img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 55px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+.footer {
+  padding: 5%;
+  font-family: "Montserrat", sans-serif;
+  background-color: #393a42;
+  text-align: center;
+}
+
+.footer h1, p {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+
+
+
+/*EXTRA DESIGNS FOR WEB*/
+/* Image hover animations */
+.middlesection #Sink1:hover, #Sink2:hover, #Sink3:hover,
+.midbot img:hover,
+.bottom img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply slide-in to sections */
+.midbot, .bottom {
+  animation: slideIn 1s ease-out;
+}
+
+/* Page load animation */
+body {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in to headings and sections */
+.main h1, .main p, .middlesection h1, .midbot h1, .bottom h1, .footer h1 {
+  animation: fadeIn 1s ease-out;
+}
+
+.middlesection, .midbot, .bottom, .footer {
+  animation: fadeIn 1s ease-out;
 }
